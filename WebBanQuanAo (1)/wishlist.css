@@ -1,0 +1,156 @@
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; color: #000; background-color: #fff; }
+
+/* PROMO & HEADER */
+.top-promo {
+  background: #000; color: #fff;
+  text-align: center; padding: 12px;
+  font-size: 13px; font-weight: bold;
+}
+
+.main-header {
+  display: flex; justify-content: space-between;
+  padding: 10px 40px; border-bottom: 1px solid #ddd;
+  align-items: center;
+}
+
+.header-left { display: flex; align-items: center; gap: 40px; }
+
+/* --- LOGO PHONG CÁCH FILE KIDS --- */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  background: #e60012;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.brand span {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+/* --------------------------------- */
+
+.category-nav a {
+  text-decoration: none; color: #756f6f;
+  font-weight: bold; font-size: 16px; margin-right: 25px;
+}
+
+.category-nav{
+  margin-left: 380px;
+}
+
+.header-right { display: flex; gap: 20px; font-size: 20px; align-items: center; }
+.header-right a { color: #000; text-decoration: none; cursor: pointer; }
+
+/* LAYOUT */
+.wishlist-container {
+  max-width: 1200px; margin: 40px auto; padding: 0 20px;
+}
+
+.wishlist-layout {
+  display: grid; grid-template-columns: 260px 1fr; gap: 60px;
+}
+
+/* SIDEBAR */
+.account-sidebar h3 {
+  font-size: 22px; font-weight: 400; margin-bottom: 20px;
+}
+
+.menu-group { margin-bottom: 40px; }
+.menu-group ul { list-style: none; }
+.menu-group li { margin-bottom: 12px; }
+.menu-group a {
+  text-decoration: none; color: #444; font-size: 14px;
+}
+
+.menu-group li.active a {
+  font-weight: bold; color: #000; border-left: 3px solid #e60012;
+  padding-left: 10px; margin-left: -13px;
+}
+
+/* MAIN CONTENT */
+.wishlist-content h1 { font-size: 32px; font-weight: 400; margin-bottom: 25px; }
+
+/* APP BANNER */
+.app-banner {
+  border: 1px solid #ddd; display: flex;
+  margin-bottom: 30px; padding: 20px; align-items: center;
+}
+
+.app-banner-left {
+  display: flex; gap: 15px; padding-right: 30px;
+  border-right: 1px solid #eee; margin-right: 30px;
+}
+
+.uni-logo-box {
+  background: #e60012; color: #fff; padding: 8px; font-weight: bold; font-size: 18px;
+}
+
+.promo-img i { font-size: 36px; color: #888; }
+
+.app-banner-right h4 { font-size: 17px; margin-bottom: 5px; }
+.app-banner-right p span { color: #e60012; font-weight: bold; }
+.download-btn {
+  margin-top: 10px; padding: 8px 20px;
+  background: #fff; border: 1px solid #000; font-weight: bold; cursor: pointer;
+}
+
+/* ITEMS GRID */
+.wishlist-items {
+  display: grid; grid-template-columns: 1fr; gap: 30px;
+  border-top: 1px solid #eee; padding-top: 20px;
+}
+
+.wish-item {
+  display: grid; grid-template-columns: 180px 1fr; gap: 25px;
+  padding-bottom: 30px; border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.item-image img { width: 100%; height: auto; background: #f4f4f4; }
+.heart-icon {
+  position: absolute; top: 10px; left: 10px; /* Chỉnh lại vị trí tim giống Uniqlo app */
+  font-size: 20px; color: #e60012; cursor: pointer;
+}
+
+.item-details h2 { font-size: 17px; font-weight: 400; margin-bottom: 8px; }
+.item-id, .item-meta { font-size: 12px; color: #666; margin-bottom: 4px; }
+.item-price { font-size: 19px; font-weight: bold; margin: 10px 0; }
+.item-status { color: #e60012; font-weight: bold; font-size: 12px; }
+.item-gender { font-size: 11px; color: #888; margin-top: 10px; }
+
+/* THE BLACK BUTTON */
+.add-to-cart-btn {
+  background: #000; color: #fff;
+  padding: 10px 25px; border: none;
+  font-weight: bold; cursor: pointer;
+  border-radius: 20px;
+  position: absolute; bottom: 30px; right: 0;
+}
+
+/* FOOTER */
+.simple-footer {
+  background: #f4f4f4; padding: 40px;
+  text-align: left; margin-top: 50px;
+}
+
+.footer-links { margin-bottom: 15px; font-size: 13px; }
+.footer-links a { text-decoration: none; color: #000; margin-right: 15px; }
+.copyright { font-size: 11px; color: #888; }

@@ -1,0 +1,273 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* HEADER */
+.checkout-header {
+  height: 94px;
+  padding: 10px 86px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* LOGO STYLE THEO FILE KIDS */
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  background: #e60012;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.brand span {
+  font-size: 10px;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: bold;
+}
+
+.header-secure {
+  font-size: 14px;
+  color: #666;
+}
+
+/* BANNER */
+.shipping-info-banner {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* MAIN LAYOUT */
+.checkout-main {
+  padding: 40px 0;
+}
+
+.checkout-container {
+  width: 1120px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 60px;
+}
+
+/* LEFT STEPS */
+.checkout-steps h1 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.shipping-promo {
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.step-section {
+  border-top: 1px solid #ddd;
+  padding: 30px 0;
+}
+
+.step-title {
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.delivery-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.delivery-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+  background-color: #fff;
+}
+
+.delivery-card.active {
+  border: 2px solid #000;
+  background-color: #fafafa;
+}
+
+.delivery-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.option-name {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.option-price {
+  font-size: 14px;
+  color: #444;
+}
+
+.option-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gray-out {
+  color: #ccc;
+}
+
+.step-instruction {
+  font-size: 15px;
+}
+
+.secure-notice {
+    margin-top: 40px;
+    font-size: 13px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.secure-notice a {
+    color: #3f35ff;
+    text-decoration: underline;
+}
+
+/* SIDEBAR SUMMARY */
+.summary-card {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.total-main {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.summary-divider {
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+}
+
+.grand-total {
+    font-size: 20px;
+}
+
+.utility-links {
+    margin-top: 20px;
+}
+
+.utility-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    text-decoration: none;
+    color: #000;
+}
+
+.iq-chat-box {
+    margin-top: 20px;
+    border: 1px solid #000;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.iq-icon {
+    border: 1px solid #000;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    min-width: 40px;
+}
+
+.iq-icon span {
+    display: block;
+    font-size: 10px;
+}
+
+.iq-text {
+    font-size: 13px;
+}
+
+/* FOOTER */
+.checkout-footer {
+    background-color: #f4f4f4;
+    padding: 40px 86px;
+    margin-top: 60px;
+}
+
+.cookie-settings {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.checkout-footer p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .checkout-header { padding: 10px 42px; }
+  .checkout-layout { grid-template-columns: 1fr; }
+  .order-summary-sidebar { order: -1; } 
+}
