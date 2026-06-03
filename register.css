@@ -1,0 +1,599 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+/* PAGE */
+.register-page {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+/* HEADER */
+.register-header {
+  width: 100%;
+  height: 82px;
+  padding: 10px 80px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  background-color: #e60012;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 800;
+  border-radius: 1px;
+}
+
+.brand span {
+  font-size: 11px;
+  color: #000;
+}
+
+.user-icon {
+  margin-top: 18px;
+  font-size: 26px;
+  color: #777;
+  margin-right: 8px;
+}
+
+/* PROMOTION BAR */
+.promo-bar {
+  width: 100%;
+  height: 36px;
+  background-color: #000;
+  color: #fff;
+}
+
+.promo-content {
+  width: 100%;
+  height: 100%;
+  padding: 0 92px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promo-content span {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.promo-content i {
+  font-size: 24px;
+}
+
+/* MAIN */
+.register-main {
+  width: 100%;
+  padding: 20px 0 24px;
+}
+
+.register-container {
+  width: 860px;
+  max-width: calc(100% - 160px);
+  margin-left: 80px;
+}
+
+.register-container h1 {
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #999;
+  margin-bottom: 26px;
+}
+
+.profile-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 620px;
+  max-width: 100%;
+  margin-bottom: 28px;
+}
+
+.profile-heading h2 {
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.profile-heading p {
+  margin-top: 68px;
+  font-size: 18px;
+}
+
+.profile-heading span,
+.required-row b {
+  color: #4f46ff;
+  font-weight: 400;
+}
+
+/* FORM */
+.register-form {
+  width: 620px;
+  max-width: 100%;
+}
+
+.form-group {
+  margin-bottom: 26px;
+}
+
+.form-group label,
+.section-label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 9px;
+}
+
+.form-group input,
+.password-box input {
+  width: 100%;
+  height: 48px;
+  border: 1px solid #999;
+  padding: 0 14px;
+  font-size: 18px;
+  color: #222;
+  outline: none;
+  background-color: #fff;
+}
+
+.form-group input::placeholder,
+.password-box input::placeholder {
+  color: #777;
+}
+
+.password-box {
+  position: relative;
+  width: 100%;
+}
+
+.password-box input {
+  padding-right: 52px;
+}
+
+.password-box i {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #222;
+}
+
+/* PASSWORD RULES */
+.password-rules {
+  margin-top: -8px;
+  margin-bottom: 52px;
+}
+
+.rule-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 0.2s ease;
+}
+
+/* Khi quy tắc password được thỏa mãn (thêm class checked bằng JS) */
+.circle.checked {
+  background-color: #000;
+  border-color: #000;
+}
+
+.circle.checked::after {
+  content: "✓";
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.rule-item p {
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* BIRTHDAY */
+.birthday-group {
+  margin-bottom: 34px;
+}
+
+.birthday-group small,
+.gender-section small,
+.newsletter-section small {
+  display: block;
+  margin-top: 11px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+/* GENDER (RADIO BUTTON) */
+.gender-section {
+  margin-bottom: 22px;
+}
+
+.radio-row,
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-row input,
+.checkbox-row input {
+  display: none; /* Ẩn ô input mặc định của trình duyệt */
+}
+
+.custom-radio {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+/* Khi Radio được chọn -> Tạo vòng tròn đen dày hoặc chấm ở giữa */
+.radio-row input:checked + .custom-radio {
+  border: 8px solid #000; /* Thay vì đổi nền, Uniqlo dùng viền cực dày để tạo chấm tròn */
+}
+
+.radio-row span:last-child,
+.checkbox-row span:last-child {
+  font-size: 14px;
+}
+
+/* REFERRAL */
+.referral-row {
+  width: 100%;
+  height: 49px;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 18px;
+}
+
+.referral-row span {
+  font-size: 17px;
+}
+
+.referral-row button {
+  width: 38px;
+  height: 38px;
+  border: none;
+  background-color: transparent;
+  font-size: 28px;
+  color: #777;
+  cursor: pointer;
+}
+
+/* NEWSLETTER & CHECKBOX */
+.newsletter-section {
+  margin-bottom: 24px;
+}
+
+.newsletter-section > p {
+  font-size: 17px;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.custom-checkbox {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #999;
+  background-color: #fff;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+/* Khi Checkbox được chọn -> Nền đen + Hiện dấu Tick */
+.checkbox-row input:checked + .custom-checkbox {
+  background-color: #000;
+  border-color: #000;
+}
+
+.checkbox-row input:checked + .custom-checkbox::after {
+  content: "✓";
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* MEMBERSHIP */
+.membership-section {
+  border-top: 1px solid #aaa;
+  padding-top: 18px;
+  margin-bottom: 28px;
+}
+
+.membership-section .section-label {
+  margin-bottom: 18px;
+}
+
+/* TERMS */
+.terms-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.mini-logo {
+  width: 35px;
+  height: 35px;
+  background-color: #e60012;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.terms-links {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 20px;
+}
+
+.terms-links a {
+  color: #5148ff;
+}
+
+.agreement-text {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 36px;
+}
+
+/* BUTTON */
+.register-btn {
+  width: 340px;
+  max-width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: 999px;
+  background-color: #000;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-bottom: 34px;
+}
+
+.register-btn:hover {
+  background-color: #333;
+}
+
+.confirmation-text {
+  width: 700px;
+  max-width: 100%;
+  font-size: 17px;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.mail-settings {
+  display: inline-block;
+  color: #5148ff;
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+
+/* SECURITY */
+.security-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.security-row i {
+  font-size: 19px;
+  margin-top: 2px;
+}
+
+.security-row p {
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.security-row a {
+  color: #5148ff;
+}
+
+/* FOOTER */
+.register-footer {
+  width: 100%;
+  margin-top: 8px;
+  background-color: #f5f5f5;
+}
+
+.cookies {
+  height: 56px;
+  padding-left: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+
+.copyright {
+  height: 42px;
+  padding-left: 80px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #888;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .register-header,
+  .promo-content {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .register-container {
+    max-width: calc(100% - 80px);
+    margin-left: 40px;
+  }
+
+  .cookies,
+  .copyright {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  .register-header {
+    height: 88px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .promo-content {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .promo-content span {
+    font-size: 15px;
+  }
+
+  .register-container {
+    max-width: calc(100% - 44px);
+    margin-left: 22px;
+  }
+
+  .register-container h1 {
+    font-size: 32px;
+  }
+
+  .profile-heading {
+    display: block;
+  }
+
+  .profile-heading h2 {
+    font-size: 26px;
+  }
+
+  .profile-heading p {
+    margin-top: 18px;
+  }
+
+  .form-group input,
+  .password-box input {
+    height: 54px;
+    font-size: 20px;
+  }
+
+  .register-btn {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .terms-links {
+    font-size: 16px;
+    flex-wrap: wrap;
+  }
+
+  .cookies,
+  .copyright {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .copyright {
+    height: auto;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.eye-btn {
+  position: absolute;
+  top: 50%;
+  right: 13px;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border: none;
+  background: transparent;
+  color: #222;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.password-box input {
+  padding-right: 58px;
+}

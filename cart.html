@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LifeWear - Shopping Cart</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="cart.css" />
+</head>
+<body>
+  <div class="cart-page">
+
+    <!-- HEADER -->
+    <header class="cart-header">
+      <a href="men.html" class="brand">
+        <div class="brand-logo">QT</div>
+        <span>LifeWear</span>
+      </a>
+
+      <a href="login.html" class="user-icon">
+        <i class="fa-regular fa-user"></i>
+      </a>
+    </header>
+
+    <!-- SHIPPING BANNER -->
+    <section class="shipping-banner">
+      <div class="shipping-icon">
+        <i class="fa-solid fa-store"></i>
+      </div>
+
+      <div class="shipping-text">
+        <p>
+          Get <span>FREE shipping</span> with orders $99+
+          <br />
+          OR when you pick up your order in-store
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN -->
+    <main class="cart-main">
+      <section class="cart-container">
+
+        <div class="cart-title">
+          <h1>Shopping cart</h1>
+          <p>You are $49.10 excluding tax away from free standard shipping.</p>
+          <a href="#">See what’s recommended for you</a>
+        </div>
+
+        <div class="cart-divider"></div>
+
+        <div class="cart-layout">
+
+          <!-- LEFT CART ITEMS -->
+          <section class="cart-items">
+
+            <!-- ITEM 1 -->
+            <article class="cart-item">
+              <div class="product-img">
+                <img
+                  src="images/img39.avif"
+                  alt="Premium Linen Shirt"
+                />
+              </div>
+
+              <div class="product-info">
+                <h2>Premium Linen Shirt</h2>
+                <p>Color: 57 OLIVE</p>
+                <p>Size: Men M</p>
+
+                <div class="product-price">$49.90</div>
+
+                <div class="quantity-box">
+                  <button type="button">-</button>
+                  <span>1</span>
+                  <button type="button">+</button>
+                </div>
+
+                <a href="#" class="remove-link">Remove</a>
+
+                <p class="subtotal">
+                  Subtotal: <b>$49.90</b>
+                </p>
+              </div>
+            </article>
+
+            <!-- ITEM 2 -->
+            <article class="cart-item">
+              <div class="product-img">
+                <img
+                  src="images/img40.avif"
+                  alt="AIRism Cotton Pique Polo Shirt"
+                />
+              </div>
+
+              <div class="product-info">
+                <h2>AIRism Cotton Pique Polo Shirt</h2>
+                <p>Color: 57 OLIVE</p>
+                <p>Size: Men S</p>
+
+                <div class="product-price">$29.90</div>
+
+                <div class="quantity-box">
+                  <button type="button">-</button>
+                  <span>1</span>
+                  <button type="button">+</button>
+                </div>
+
+                <a href="#" class="remove-link">Remove</a>
+
+                <p class="subtotal">
+                  Subtotal: <b>$29.90</b>
+                </p>
+              </div>
+            </article>
+
+            <!-- ITEM 3 -->
+            <article class="cart-item">
+              <div class="product-img">
+                <img
+                  src="images/img41.avif"
+                  alt="DRY-EX UV Protection Full-Zip Hoodie"
+                />
+              </div>
+
+              <div class="product-info">
+                <h2>DRY-EX UV Protection Full-Zip Hoodie | Print</h2>
+                <p>Color: 03 GRAY</p>
+                <p>Size: Men S</p>
+
+                <div class="product-price">$39.90</div>
+
+                <div class="quantity-box">
+                  <button type="button">-</button>
+                  <span>1</span>
+                  <button type="button">+</button>
+                </div>
+
+                <a href="#" class="remove-link">Remove</a>
+
+                <p class="subtotal">
+                  Subtotal: <b>$39.90</b>
+                </p>
+              </div>
+            </article>
+
+          </section>
+
+          <!-- RIGHT SUMMARY -->
+          <aside class="cart-summary">
+
+            <div class="summary-box">
+              <div class="summary-header">
+                <h2>Order Summary</h2>
+                <strong>1 Item(s)</strong>
+              </div>
+
+              <div class="summary-line"></div>
+
+              <div class="summary-row">
+                <span>Item(s) subtotal</span>
+                <span>$119.7</span>
+              </div>
+
+              <div class="summary-row">
+                <span>Shipping</span>
+                <span>TBD</span>
+              </div>
+
+              <div class="summary-row">
+                <span>Subtotal</span>
+                <span>$119.7</span>
+              </div>
+
+              <div class="summary-row">
+                <span>Estimate tax</span>
+                <span>TBD</span>
+              </div>
+
+              <div class="summary-line"></div>
+
+              <div class="summary-row total-row">
+                <strong>Order Total</strong>
+                <strong>$119.7</strong>
+              </div>
+            </div>
+
+            <div class="option-list">
+              <a href="#" class="option-row">
+                <span><i class="fa-solid fa-ticket"></i> Coupon(1)</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+
+              <a href="#" class="option-row">
+                <span><i class="fa-solid fa-gift"></i> Gift option</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+
+            <div class="summary-note">
+              <p>
+                You are $49.10 excluding tax away from free standard shipping.
+              </p>
+
+              <a href="#">See what’s recommended for you</a>
+
+              <p>
+                Click “Checkout” to reserve Cart contents for 60 minutes
+              </p>
+            </div>
+
+            <a href="checkout.html" class="checkout-btn">
+              CHECKOUT
+            </a>
+
+            <a href="#" class="policy-link">
+              View Our Return / Exchange Policy
+            </a>
+
+            <div class="klarna-box">
+              <strong>Klarna</strong>
+              <span>Buy now. Pay later with Klarna.</span>
+            </div>
+
+            <div class="chat-box">
+              <i class="fa-regular fa-message"></i>
+              <span>
+                Having issues with checkout?
+                <br />
+                Chat can help
+              </span>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </section>
+    </main>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

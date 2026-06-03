@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>LifeWear - Login</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="login-page">
+
+    <!-- HEADER -->
+    <header class="login-header">
+      <a href="men.html" class="brand">
+        <div class="brand-logo">QT</div>
+        <span>LifeWear</span>
+      </a>
+    </header>
+
+    <!-- MAIN -->
+    <main class="login-main">
+      <section class="login-container">
+
+        <div class="title-row">
+          <h1>Login</h1>
+
+          <button class="info-btn" type="button" aria-label="Information">
+            <i class="fa-solid fa-info"></i>
+          </button>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="login-content">
+
+          <!-- LEFT: LOGIN FORM -->
+          <form class="login-form">
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="xxx@uniqlo.com"
+              />
+            </div>
+
+            <div class="form-group password-group">
+              <label for="password">Password</label>
+
+              <div class="password-box">
+                <input
+                  type="password"
+                  id="password"
+                  placeholder="Please enter a password"
+                />
+                <button type="button" class="eye-btn" aria-label="Show password">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            <div class="forgot">
+              <a href="#" class="forgot-link">Forgot your password?</a>
+            </div>
+            <div class="login">
+              <button type="submit" class="login-btn">LOG IN</button>
+            </div>
+          </form>
+
+          <!-- RIGHT: CREATE ACCOUNT -->
+          <aside class="create-account-box">
+            <a href="register.html" class="create-btn">
+              CREATE AN ACCOUNT
+            </a>
+
+            <p>
+              Streamline checkout and register today for free! Create an account
+              and get a coupon.
+            </p>
+          </aside>
+
+        </div>
+
+        <!-- TERMS -->
+        <div class="terms-row">
+          <div class="mini-logo">QT</div>
+
+          <div class="terms-links">
+            <a href="#">Terms</a>
+            <span>+</span>
+            <a href="#">conditions</a>
+            <span>|</span>
+            <a href="#">privacy policy</a>
+          </div>
+        </div>
+
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="login-footer">
+      <p>
+        Copyright © UNIQLO Co., Ltd. All rights reserved. |
+        Copyright © G.U. CO., Ltd. All rights reserved.
+      </p>
+    </footer>
+
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
