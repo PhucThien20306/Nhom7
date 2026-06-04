@@ -271,3 +271,20 @@ body {
   .checkout-layout { grid-template-columns: 1fr; }
   .order-summary-sidebar { order: -1; } 
 }
+
+.place-order-btn {
+  width: 100%;
+  height: 52px;
+  margin-top: 22px;
+  border: none;
+  border-radius: 999px;
+  background: #000;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background: #333;
+}
