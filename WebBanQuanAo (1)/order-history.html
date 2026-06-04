@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Order History - QT LifeWear</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="order-history.css" />
+</head>
+<body>
+  <div class="order-history-page">
+
+    <!-- HEADER -->
+    <header class="history-header">
+      <a href="men.html" class="brand">
+        <div class="brand-logo">QT</div>
+        <span>LifeWear</span>
+      </a>
+
+      <nav class="history-nav">
+        <a href="men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="kids.html">Kids</a>
+        <a href="baby.html">Baby</a>
+      </nav>
+
+      <div class="header-icons">
+        <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="wishlist.html"><i class="fa-regular fa-heart"></i></a>
+        <a href="login.html"><i class="fa-regular fa-user"></i></a>
+        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="history-main">
+      <section class="history-container">
+        <div class="history-title-row">
+          <div>
+            <h1>Purchase History</h1>
+            <p>Review your previous orders and order details.</p>
+          </div>
+
+          <a href="men.html" class="continue-btn">
+            CONTINUE SHOPPING
+          </a>
+        </div>
+
+        <div class="history-divider"></div>
+
+        <section id="order-history-list" class="order-history-list">
+          <!-- JavaScript sẽ render lịch sử đơn hàng ở đây -->
+        </section>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

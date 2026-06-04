@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Order Success - QT LifeWear</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .success-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .success-header {
+      height: 86px;
+      padding: 12px 80px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .brand {
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: #e60012;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .brand span {
+      font-size: 11px;
+    }
+
+    .success-main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 24px;
+    }
+
+    .success-card {
+      width: 620px;
+      max-width: 100%;
+      text-align: center;
+      border: 1px solid #ddd;
+      padding: 50px 42px;
+    }
+
+    .success-icon {
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 26px;
+      border-radius: 50%;
+      background: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 34px;
+    }
+
+    .success-card h1 {
+      font-size: 34px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .success-card p {
+      font-size: 16px;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .order-info {
+      margin: 28px 0;
+      padding: 18px;
+      background: #f6f6f6;
+      text-align: left;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .success-actions {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+
+    .success-actions a {
+      min-width: 180px;
+      height: 48px;
+      padding: 0 22px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .primary-btn {
+      background: #000;
+      color: #fff;
+    }
+
+    .secondary-btn {
+      border: 1px solid #111;
+      color: #111;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="success-page">
+
+    <header class="success-header">
+      <a href="men.html" class="brand">
+        <div class="brand-logo">QT</div>
+        <span>LifeWear</span>
+      </a>
+    </header>
+
+    <main class="success-main">
+      <section class="success-card">
+        <div class="success-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+
+        <h1>Order placed successfully!</h1>
+
+        <p>Thank you for shopping with QT LifeWear.</p>
+        <p>Your order has been created and saved successfully.</p>
+
+        <div class="order-info" id="order-success-info">
+          Loading order information...
+        </div>
+
+        <div class="success-actions">
+          <a href="men.html" class="primary-btn">CONTINUE SHOPPING</a>
+          <a href="order-history.html" class="secondary-btn">VIEW ORDER HISTORY</a>
+          <a href="cart.html" class="secondary-btn">BACK TO CART</a>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
