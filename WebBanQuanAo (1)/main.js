@@ -835,6 +835,84 @@
     });
   }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const cartItems = document.querySelectorAll(".cart-item");
+  const summaryBox = document.querySelector(".summary-box");
+  const totalItemsCount = summaryBox.querySelector(".summary-header strong");
+  const itemsSubtotalText = summaryBox.querySelectorAll(".summary-row span")[1];
+  const orderSubtotalText = summaryBox.querySelectorAll(".summary-row span")[5];
+  const orderTotalText = summaryBox.querySelectorAll(".total-row strong")[1];
+
+  // Hàm tính toán và cập nhật lại toàn bộ bảng Order Summary
+  const updateOrderSummary = () => {
+    let totalItems = 0;
+    let totalAmount = 0;
+
+    // Duyệt qua từng sản phẩm hiện có trong giỏ để gom dữ liệu
+    document.querySelectorAll(".cart-item").forEach((item) => {
+      const qtySpan = item.querySelector(".quantity-box span");
+      const priceText = item.querySelector(".product-price").textContent;
+      
+      const quantity = parseInt(qtySpan.textContent);
+      const unitPrice = parseFloat(priceText.replace(/[^0-9.-]+/g, ""));
+
+      totalItems += quantity;
+      totalAmount += unitPrice * quantity;
+    });
+
+    // Cập nhật text hiển thị lên giao diện cột phải
+    totalItemsCount.textContent = `${totalItems} Item(s)`;
+    itemsSubtotalText.textContent = `$${totalAmount.toFixed(2)}`;
+    orderSubtotalText.textContent = `$${totalAmount.toFixed(2)}`;
+    orderTotalText.textContent = `$${totalAmount.toFixed(2)}`;
+  };
+
+  cartItems.forEach((item) => {
+    // 2. Định vị các phần tử UI con bên trong từng sản phẩm
+    const btnMinus = item.querySelector(".quantity-box button:first-of-type");
+    const btnPlus = item.querySelector(".quantity-box button:last-of-type");
+    const qtySpan = item.querySelector(".quantity-box span");
+    
+    const priceText = item.querySelector(".product-price").textContent;
+    const subtotalBold = item.querySelector(".subtotal b");
+
+    // Trích xuất giá trị số từ chuỗi tiền tệ (Ví dụ: "$49.90" -> 49.90)
+    const unitPrice = parseFloat(priceText.replace(/[^0-9.-]+/g, ""));
+
+    // Hàm cập nhật thành tiền (Subtotal) của riêng sản phẩm này
+    const updateItemSubtotal = (quantity) => {
+      const currentSubtotal = unitPrice * quantity;
+      subtotalBold.textContent = `$${currentSubtotal.toFixed(2)}`;
+    };
+
+    // 3. Lắng nghe sự kiện click cho nút Cộng (+)
+    btnPlus.addEventListener("click", () => {
+      let currentQty = parseInt(qtySpan.textContent);
+      currentQty++;
+      qtySpan.textContent = currentQty;
+      
+      updateItemSubtotal(currentQty);
+      updateOrderSummary(); // Cập nhật lại hóa đơn tổng
+    });
+
+    // 4. Lắng nghe sự kiện click cho nút Trừ (-)
+    btnMinus.addEventListener("click", () => {
+      let currentQty = parseInt(qtySpan.textContent);
+      
+      if (currentQty > 1) {
+        currentQty--;
+        qtySpan.textContent = currentQty;
+        
+        updateItemSubtotal(currentQty);
+        updateOrderSummary(); // Cập nhật lại hóa đơn tổng
+      }
+    });
+  });
+
+  // Chạy tính toán lại một lần khi vừa tải trang để đồng bộ số liệu chuẩn ban đầu
+  updateOrderSummary();
+});
+
   function injectSidebarCSS() {
     if (document.querySelector("#sidebar-style")) return;
 
